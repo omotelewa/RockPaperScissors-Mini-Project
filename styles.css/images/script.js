@@ -1,4 +1,4 @@
-const i = 6;
+dconst i = 6;
 const matrixArry = [];
 
 const ladderPath = {
@@ -30,7 +30,7 @@ function createMatrix(i){
                 }
             } else{
                 for(let row=1;row<=n;row++){
-                    block = - 1;
+                    block = block- 1;
                     rows.push(block);
                 }
             }
@@ -41,35 +41,52 @@ createMatrix(i);
 }
 
 //creating board 
-function creategameBoard(){
-    // creating the game board
-    let htmlString = '';
-    for(let r=0;r<matrixArry[0].length;r++){
-        htmlString += '<tr>';
-        for(let c=0;c<matrixArry.length;c++){
-            htmlString += `<td>${matrixArry[c][r]}</td>`;
-            }
-        htmlString += '</tr>'
-        }
-        document.getElementById('board').innerHTML = htmlString;
-        }
 
-// function to update score and position of snake on the board  
-function updateScoresAndPositioningOfSnakeOnGameBoard() {
-    const headX = snakeHead.x;
-    const headY = snakeHead.y;
-    // updating scores
-    document.querySelector('.score-container span').textContent = `Score: ${snakeLength}`;
-    // updating positions of snake on the board
-    document.querySelectorAll(`#board tr td`).forEach((cell)=>{
-        cell.classList.remove("head", "body");
+    // creating the game board
+    function creategameBoard(){
+        const matrixArry = createMatrix(i);
+        const board = document.querySelector('.gameBoard')
+        let str = "";
+        matrixArry.map(row => {
+            str += `
+                <div class="row" >`
+                row.map(block => {
+                    str +=`
+
+                    <div
+                        class="block ${block === 1 ? 'active ' : ''} value=${block}>
+                        ${block}
+                        </div>
+                        `
+                })
+
+                str += '</div>'
+            })
+            board.innerHTML = str;
+        }
+          
+
+      function creaateGameBoard(){
+        const matrixArry = createMatrix(i);
+        const board = document.querySelector('.gameBoard');
+        let str = '';
+      }
+      
+
+    
+    // calling the function to generate the board
+    creategameBoard();
+        board.innerHTML = str;
+      
         });
-        document.querySelector(`#board tr:nth-child(${headY+1}) td:nth-child(${headX+1
-            })`)?.classList.add("head");
-        snakeBody.forEach(segment => {
-            document.querySelector(`#board tr:nth-child(${segment.y+1}) td:nth-child(${segment.x
+    
+        // function to move snake in different directions
+function moveSnake() {
+
+// function to move snake in different directions
+function moveSnakeInDifferentDirection() {
         
-    });
+    };
 
 //snake movement
 function moveSnake() {
@@ -79,6 +96,6 @@ function moveSnake() {
     
     document.getElementById('board').innerHTML = htmlString;
         }
-    
+        
 
-}
+    
