@@ -1,1 +1,1 @@
-# RockPaperScissors-Mini-Project
+# Snames and Ladders Game Mini Project
