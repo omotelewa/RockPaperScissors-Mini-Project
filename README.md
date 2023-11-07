@@ -1,1 +1,1 @@
-# Snames and Ladders Game Mini Project
+# Snakes and Ladders Game Mini Project
