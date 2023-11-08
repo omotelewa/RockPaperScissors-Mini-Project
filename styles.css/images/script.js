@@ -1,4 +1,4 @@
-dconst i = 6;
+const i = 6;
 const matrixArry = [];
 
 const ladderPath = {
@@ -17,85 +17,82 @@ const snakePath = {
   29: 16,
 };
 
-function createMatrix(i){
-    let block = (i * i) + 1;
-    for(let column=1;column<=icolumn++){
-        let rows = [];
-            if(column % 2 === 0){
-                block = block - i;
-                let val = block;
-                for(let row = 1; row<=n;row++){
-                    rows.push({val});
-                    val++
-                }
-            } else{
-                for(let row=1;row<=n;row++){
-                    block = block- 1;
-                    rows.push(block);
-                }
-            }
-        matrixArry.push(rows);
-        }
-        
-createMatrix(i);
+function createMatrix(i) {
+  let block = i * i + 1;
+  for (let column = 1; column <= i; column++) {
+    let rows = [];
+    if (column % 2 === 0) {
+      block = block - i;
+      let val = block;
+      for (let row = 1; row <= i; row++) {
+        rows.push({ block });
+        val++;
+      }
+    } else {
+      for (let row = 1; row <= i; row++) {
+        block = block - 1;
+        rows.push(block);
+      }
+    }
+    matrixArry.push(rows);
+  }
+
+  return matrixArry;
 }
 
-//creating board 
+console.log(createMatrix(6));
 
-    // creating the game board
-    function creategameBoard(){
-        const matrixArry = createMatrix(i);
-        const board = document.querySelector('.gameBoard')
-        let str = "";
-        matrixArry.map(row => {
-            str += `
-                <div class="row" >`
-                row.map(block => {
-                    str +=`
+//creating board
+
+// creating the game board
+function creategameBoard() {
+  const matrixArry = createMatrix(i);
+  const board = document.querySelector(".gameBoard");
+  let str = "";
+  matrixArry.map((row) => {
+    str += `
+                <div class="row">`;
+    row.map((block) => {
+      str += `
 
                     <div
-                        class="block ${block === 1 ? 'active ' : ''} value=${block}>
+                        class="block ${
+                          block === 1 ? "active " : ""
+                        } value=${block}>
                         ${block}
                         </div>
-                        `
-                })
+                        `;
+    });
 
-                str += '</div>'
-            })
-            board.innerHTML = str;
-        }
-          
+    str += "</div>";
+  });
+  board.innerHTML = str;
+}
 
-      function creaateGameBoard(){
-        const matrixArry = createMatrix(i);
-        const board = document.querySelector('.gameBoard');
-        let str = '';
-      }
-      
+// function creaateGameBoard() {
+//   const matrixArry = createMatrix(i);
+//   const board = document.querySelector(".gameBoard");
+//   let str = "";
 
-    
-    // calling the function to generate the board
-    creategameBoard();
-        board.innerHTML = str;
-      
-        });
-    
-        // function to move snake in different directions
-function moveSnake() {
+//   matrixArry.map((row) => {
+//     str += `
+//                 <div class = "row"> `;
+//     row.map((block) => {
+//       str += `
 
-// function to move snake in different directions
-function moveSnakeInDifferentDirection() {
-        
-    };
+//                 <div
 
-//snake movement
-function moveSnake() {
-    
-    document.getElementById('board').innerHTML = htmlString;
-    }
-    
-    document.getElementById('board').innerHTML = htmlString;
-        }
-        
+//                 class=block $(ladderPath[block] ? LADDER_CLASS : ' '} ${
+//                   snakePath[block] ? SnakeClass : ""
+//                 } $(block ===1 ?
+//                 'active' : ''} " data-value=${block}>
+//                 ${block}
+//                     </div>
+//                     `;
+//     });
 
-    
+//     str += "</div>";
+//   });
+
+//   board.innerHTML = str;
+// }
