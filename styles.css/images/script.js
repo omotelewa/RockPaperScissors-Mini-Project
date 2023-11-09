@@ -21,39 +21,43 @@ for (let i = 0; i < height; i++) {
 console.log(gameBoard);
 
 //creating table with rows and columns - table rows and table data
-let displaygameBoard = () => {
-  let htmlString = "";
-  gameBoard.forEach((row) => {
-    htmlString += "<tr>";
-    row.forEach((data) => {
-      if (!data.filled) {
-        htmlString += `<td class="empty" onclick="fillSquare(${data.i},${data.j})"></td>`;
-      } else {
-        htmlString += `<td class="${data.filled}" ></td>`;
-      }
+let createTable = (rows) => {
+  const table = document.createElement("table");
+  table.setAttribute("class", "board");
+  Object.keys(rows).forEach((key) => {
+    const tr = document.createElement("tr");
+    rows[key].forEach((value) => {
+      const td = document.createElement("td");
+      td.textContent = value;
+      tr.appendChild(td);
     });
-    htmlString += "</tr>";
+    table.appendChild(tr);
   });
-  document.querySelector("p")("table").innerHTML = htmlString;
+  return table;
 };
-displaygameBoard();
 
-const table = document.createElement("table");
-for (let i = 0; i < height; i++) {
-  const tr = document.createElement("tr");
-  for (let j = 0; j < width; j++) {
-    const td = document.createElement("td");
-    if (!gameBoard[i][j].filled) {
-    } else {
-      td.textContent = gameBoard[i][j].filled;
-    }
-    tr.appendChild(td);
-  }
-  table.appendChild(tr);
-}
+document.body.appendChild(createTable(gameBoard));
 
 document.body.append(table);
 
 displaygameBoard();
 
-//creating player objects
+//create players
+const playerOne = { name: "player one" };
+const playerTwo = { name: "player two" };
+//function to display game board on screen
+const displayGameBoard = () => {
+  let output = "";
+  //iterate through each element in the game board
+  for (let i = 0; i < gameBoard.length; i++) {
+    for (let j = 0; j < gameBoard[i].length; j++) {
+      if (gameBoard[i][j] === null) {
+        output += `<div class="box empty"></div>`;
+      } else {
+        output += `<div class="box occupied">${gameBoard[i][j]}</div>`;
+      }
+    }
+    output += "</br>";
+  }
+  document.getElementById("output").innerHTML = output;
+};
