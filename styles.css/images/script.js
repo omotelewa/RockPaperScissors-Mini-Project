@@ -67,7 +67,14 @@ const displayGameBoard = () => {
 const handleClicks = (e) => {
     console.log(e.target.id);
   if (!isOver && e.target.className !== "occupied") {
+    isOver = true;
+    currentPlayer = currentPlayer == playerOne ? playerTwo : playerOne;
+    turnCount++;
+    switch (currentPlayer.name) {
+      case "player one":
+        player1Turn(e.target.id);
 
 
-// function to handle clicks on boxes
-const clickBox = (e) => {
+
+
+
