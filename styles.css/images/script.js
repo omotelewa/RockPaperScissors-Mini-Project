@@ -63,9 +63,7 @@ const displayGameBoard = () => {
   }
   document.getElementById("output").innerHTML = output;
 };
-// function to handle click events for players to take turns
-const handleClicks = (e) => {
-  console.log(e.target.id);
+
   if (!isOver && e.target.className !== "occupied") {
     isOver = true;
     currentPlayer = currentPlayer == playerOne ? playerTwo : playerOne;
@@ -75,28 +73,40 @@ const handleClicks = (e) => {
         player1Turn(e.target.id);
     }
   }
-};
 
-// function to update the game board with a new piece and check for win conditions
+
+// function to handle player one's move
+function player1Turn(position) {
+
+// function to handle player one's turn
 const player1Turn = (position) => {
-  const rowIndex = Math.floor(parseInt(position) / 3);
-  const colIndex = parseInt(position) % 3;
-  gameBoard[rowIndex][colIndex] = "X";
-  displayGameBoard();
-  checkForWin("X");
-};
+    const rowIndex = Math.floor(parseInt(position) / 3);
+    const colIndex = parseInt(position) % 3;
+    //check if position is already occupied or not
+    if (gameBoard[rowIndex][colIndex] != null) {
+        alert(`Sorry, ${currentPlayer.name}, this spot is already taken!`);
+      return false;
+    }
+    //update the game board with X
+    gameBoard[rowIndex][colIndex] = 'X';
+    updateDisplay();
+    checkForWin();
+    }
 
-//checking for win condition
-//const rowIndex = Math.floor(parseInt(position)/3);
-//const rowIndex = parseInt(position.charAt(1)) - 1;
-//const colIndex = position.charAt(2) - 1;
-//gameBoard[rowIndex][colIndex] = 'X';
-//displayGameBoard();
-//checkWinConditions();
+// function to handle player two's turn
+const player2Turn = (position) => {
+}
 
-//checking for win condition
-const checkWinConditions = () => {
-  //horizontal wins
-};
+// function to handle player two's move
 
-const colIndex = parseInt(position) % 3;
+
+
+
+
+
+
+
+
+
+
+// 
