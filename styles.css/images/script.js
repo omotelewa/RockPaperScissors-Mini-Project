@@ -45,9 +45,11 @@ displaygameBoard();
 //create players
 const playerOne = { name: "player one" };
 const playerTwo = { name: "player two" };
+
 //function to display game board on screen
 const displayGameBoard = () => {
   let output = "";
+  
   //iterate through each element in the game board
   for (let i = 0; i < gameBoard.length; i++) {
     for (let j = 0; j < gameBoard[i].length; j++) {
@@ -61,3 +63,11 @@ const displayGameBoard = () => {
   }
   document.getElementById("output").innerHTML = output;
 };
+// function to handle click events
+const handleClicks = (e) => {
+    console.log(e.target.id);
+  if (!isOver && e.target.className !== "occupied") {
+
+
+// function to handle clicks on boxes
+const clickBox = (e) => {
