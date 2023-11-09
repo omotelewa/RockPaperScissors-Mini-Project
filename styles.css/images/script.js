@@ -63,7 +63,7 @@ const displayGameBoard = () => {
   }
   document.getElementById("output").innerHTML = output;
 };
-// function to handle click events
+// function to handle click events for players to take turns
 const handleClicks = (e) => {
     console.log(e.target.id);
   if (!isOver && e.target.className !== "occupied") {
@@ -74,7 +74,12 @@ const handleClicks = (e) => {
       case "player one":
         player1Turn(e.target.id);
 
+    
+    }
+    }
+};
 
-
-
-
+// function to update the game board with a new piece and check for win conditions
+const player1Turn = (position) => {
+  const rowIndex = Math.floor(parseInt(position)/3);
+  
