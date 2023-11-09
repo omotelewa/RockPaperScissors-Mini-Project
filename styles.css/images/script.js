@@ -49,7 +49,7 @@ const playerTwo = { name: "player two" };
 //function to display game board on screen
 const displayGameBoard = () => {
   let output = "";
-  
+
   //iterate through each element in the game board
   for (let i = 0; i < gameBoard.length; i++) {
     for (let j = 0; j < gameBoard[i].length; j++) {
@@ -65,7 +65,7 @@ const displayGameBoard = () => {
 };
 // function to handle click events for players to take turns
 const handleClicks = (e) => {
-    console.log(e.target.id);
+  console.log(e.target.id);
   if (!isOver && e.target.className !== "occupied") {
     isOver = true;
     currentPlayer = currentPlayer == playerOne ? playerTwo : playerOne;
@@ -73,13 +73,30 @@ const handleClicks = (e) => {
     switch (currentPlayer.name) {
       case "player one":
         player1Turn(e.target.id);
-
-    
     }
-    }
+  }
 };
 
 // function to update the game board with a new piece and check for win conditions
 const player1Turn = (position) => {
-  const rowIndex = Math.floor(parseInt(position)/3);
-  
+  const rowIndex = Math.floor(parseInt(position) / 3);
+  const colIndex = parseInt(position) % 3;
+  gameBoard[rowIndex][colIndex] = "X";
+  displayGameBoard();
+  checkForWin("X");
+};
+
+//checking for win condition
+//const rowIndex = Math.floor(parseInt(position)/3);
+//const rowIndex = parseInt(position.charAt(1)) - 1;
+//const colIndex = position.charAt(2) - 1;
+//gameBoard[rowIndex][colIndex] = 'X';
+//displayGameBoard();
+//checkWinConditions();
+
+//checking for win condition
+const checkWinConditions = () => {
+  //horizontal wins
+};
+
+const colIndex = parseInt(position) % 3;
