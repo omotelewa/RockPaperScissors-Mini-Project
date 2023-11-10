@@ -1,50 +1,26 @@
-<!DOCTYPE html>      
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Snakes and Ladders</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-         <div class=" container">
-            <div class = "game-board"></div>
-            <div class ="dice-container">
-            <img style="width: 700px;" src=""/>
-    
-          <button onclick="roll()"> Dice Roll </button>
-     </div>
-     
-        
-        <script src="styles.css/images/script.js" defer></script>
-    </body>
-   </html>
-<!--
-steps to create my snakes and ladder game:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class=" container">
+        <div class = "game-board" id="game-board"></div>
+        <div class ="dice-container">
+      
 
- Create the HTML page
-
-Create a 6*6 board with numbers on it. - 
-  ***Using 2 dimensional array for the grid (Matric) - will see how it works first
-
-    const n = 6;
-    const matrixArray = [];
-
-Add Snakes & Ladders
-
-Generate dice value.
-
-current player position will change based on the value of the dice.
-*/
-
-Function: createMatrix() 
-    Function createBoard()
-    Function: rollDice()-->
-
-   <button.onClick=rollDice()>Roll Dice</button>
-   <button.onClick=rollDice()<Roll Dice</button.onClick>
-    //create the board
-   function createBoard(){
-       let board = document.querySelector('.game-board');
+        <!-- <button onclick="roll()"> Dice Roll </button> -->
+    </div>
+    <script src="script/grid.js"></script>
+    <script src="script/dice.js"></script>
+    <script src="script/ladder.js"></script>
+    <script src="script/player.js"></script>
+    <script src="script/snake.js"></script>
+    <script src="script/game.js"></script>
+ 
+</body>
+</body>
+</html>

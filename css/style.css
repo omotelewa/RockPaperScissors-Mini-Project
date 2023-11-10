@@ -1,0 +1,19 @@
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 75px;
+
+}
+
+.cell{
+    border:1px solid grey;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size:24px;
+
+}
