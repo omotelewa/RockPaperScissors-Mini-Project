@@ -1,5 +1,5 @@
 class Grid {
-  constructor() {
+      constructor() {
     this.grid = [];
     let value = 100;
     for (let i = 10; i > 0; i--) {
@@ -15,7 +15,7 @@ class Grid {
 
     };
     this.ladders = {
-        
+
     };
   }
 }
