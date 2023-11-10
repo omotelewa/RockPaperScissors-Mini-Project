@@ -64,94 +64,70 @@ const displayGameBoard = () => {
   document.getElementById("output").innerHTML = output;
 };
 
-  if (!isOver && e.target.className !== "occupied") {
-    isOver = true;
-    currentPlayer = currentPlayer == playerOne ? playerTwo : playerOne;
-    turnCount++;
-    switch (currentPlayer.name) {
-      case "player one":
-        player1Turn(e.target.id);
-    }
+if (!isOver && e.target.className !== "occupied") {
+  isOver = true;
+  currentPlayer = currentPlayer == playerOne ? playerTwo : playerOne;
+  turnCount++;
+  switch (currentPlayer.name) {
+    case "player one":
+      player1Turn(e.target.id);
   }
-
+}
 
 // function to handle player one's plays
 function player1Turn(position) {
-
-// function to handle player one's turn
-const player1Turn = (position) => {
+  // function to handle player one's turn
+  const player1Turn = (position) => {
     const rowIndex = Math.floor(parseInt(position) / 3);
     const colIndex = parseInt(position) % 3;
     //check if position is already occupied or not
     if (gameBoard[rowIndex][colIndex] != null) {
-        alert(`Sorry, ${currentPlayer.name}, this spot is already taken!`);
+      alert(`Sorry, ${currentPlayer.name}, this spot is already taken!`);
       return false;
     }
     //update the game board with X
-    gameBoard[rowIndex][colIndex] = 'X';
+    gameBoard[rowIndex][colIndex] = "X";
     updateDisplay();
     checkForWin();
-    }
+  };
 
-// function to handle player two's turn
-const player2Turn = (position) => {
-}
-// function to handle end of game
-const endOfGame = () => {
-    alert('The Game has ended');
-}
-// function to check for win condition
-const checkForWin = () => {
+  // function to handle player two's turn
+  const player2Turn = (position) => {};
+  // function to handle end of game
+  const endOfGame = () => {
+    alert("The Game has ended");
+  };
+  // function to check for win condition
+  const checkForWin = () => {
     let winningCombination = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
     ];
 
     //running a for loop to check for the winning combination  display endo of game with current player scores
     for (let i = 0; i < winningCombination.length; i++) {
-        if ((gameBoard[winningCombination[i][0]] === gameBoard[winningCombination[i][1]])
-        && (gameBoard[winningCombination[i][0]] === gameBoard[winningCombination[i][2]])
-    && (gameBoard[winningCombination[i][0]] !== null)) {
+      if (
+        gameBoard[winningCombination[i][0]] ===
+          gameBoard[winningCombination[i][1]] &&
+        gameBoard[winningCombination[i][0]] ===
+          gameBoard[winningCombination[i][2]] &&
+        gameBoard[winningCombination[i][0]] !== null
+      ) {
         currentPlayer.score += 1;
-        document.getElementById("score").innerHTML = `Score: ${currentPlayer.score}`;
-            endOfGame();
-        }
-        }
-};
+        document.getElementById(
+          "score"
+        ).innerHTML = `Score: ${currentPlayer.score}`;
+        endOfGame();
+      }
+    }
+  };
 
-// function to switch between players
-const switchPlayers = () => {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function to handle player two's move
-
-
-
-
-
-
-
-
-
-
-
-// 
+  // function to switch between players
+  //const switchPlayers = () => {
+}
