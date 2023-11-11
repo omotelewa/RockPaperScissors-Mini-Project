@@ -4,6 +4,7 @@ class ladders{
     constructor (tailLocation){
         this.tailLocation = tailLocation;
         
+        
 
 
     }
