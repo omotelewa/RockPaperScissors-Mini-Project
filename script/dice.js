@@ -5,6 +5,6 @@ class Dice {
   }
   rollDice() {
     let randomNumber = Math.floor(Math.random() * 6);
-    return this.faces[randomNumber];
+     this.currentFace =this.faces[randomNumber];
   }
 }
