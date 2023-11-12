@@ -46,7 +46,7 @@ function movePlayer(event) {
   displayUi();
   checkWin();
 }
-function displayBoard() {
+function displayboad() {
   boardUi.innerHTML = "";
   for (let i = 0; i < boardData.grid.length; i++) {
     let rowContainer = document.createElement("div");
