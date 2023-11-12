@@ -20,10 +20,43 @@
 body{
     background-color:red;
 }
+
+.container{
+    position: relative;
+    top:0;
+    height: 50vw;
+
+}
+
+.game-board{
+    position: absolute;
+    top: 0;
+    width: 100%;
+   
+
+} 
+
+.items-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+
 .playerContainer{
     display: flex;
     flex-direction: column;
     width: 10px;
+
+}
+.image1{
+    position: absolute;
+    left: 50%;
+    width: 10%;
+    top: 190px;
+
 
 }
 
