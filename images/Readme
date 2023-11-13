@@ -52,6 +52,9 @@ I used two dots to represent the dices as that was better for me to implement th
 Images used in the game:
 Images from the internet, snakes and ladders. There were difficulties getting png images without background so this made it more tedius to get.
 
+Grids used in the game:
+
+
 Issues faced during development:
 
 - I had difficulty implementing the snakes and ladders feature due to lack of knowledge about how to implement some features as it changes whenever a snake or ladder is added.
