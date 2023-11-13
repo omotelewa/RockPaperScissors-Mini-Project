@@ -53,6 +53,7 @@ Images used in the game:
 Images from the internet, snakes and ladders. There were difficulties getting png images without background so this made it more tedius to get.
 
 Grids used in the game:
+Used for loop to create the grid for the game.  
 
 
 Issues faced during development:
