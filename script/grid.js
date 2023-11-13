@@ -1,3 +1,5 @@
+// The Grid class represents the grid that contains the gameboard values and locations for snakes and ladders
+
 class Grid {
   constructor() {
     this.grid = [];
@@ -20,9 +22,21 @@ class Grid {
       14: new Ladder(36),
     };
   }
+  // This method checks if a location contains a snake and returns its tail position.
   checkSnake(location) {
     if (location in this.snakes) {
+      console.log(this.snakes[location].tailLocation);
+
       return this.snakes[location].tailLocation;
+    }
+    return -1;
+  }
+  // This method checks if a location contains a ladder and returns its head position.
+  
+  checkLadder(location) {
+    if (location in this.ladders) {
+      console.log(this.ladders[location].topLocation);
+      return this.ladders[location].topLocation;
     }
     return -1;
   }
