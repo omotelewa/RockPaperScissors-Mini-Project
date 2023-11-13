@@ -1,13 +1,55 @@
 README.
-Project Name:  Miniproject  - Snakes and Ladders.	
+Project Name: Miniproject - Snakes and Ladders.
 The Project requirement:
-	Must have a reset button
+Must have a reset button
 If you build a you Game must have:
-1.	Must be a two player game (either against the computer or against another player)
 
-2.	A win state - a way for the player to win the game
-o	High score can be considered a win state
+1. Must be a two player game (either against the computer or against another player)
 
-4.	A way to keep playing if the game is not over
+2. A win state - a way for the player to win the game
+   o High score can be considered a win state
 
-5.	Multiple rounds to play - a round must begin, end, and there must be a way to check if the game should continue or the overall game is won or lost
+3. A way to keep playing if the game is not over
+
+4. Multiple rounds to play - a round must begin, end, and there must be a way to check if the game should continue or the overall game is won or lost
+
+Project Description:
+Snakes and Ladder game with 2 players
+
+Technologies used to create the project are:
+html
+CSS
+javaSctipt.
+
+Functionalities:
+Project has 2 players, there are 2 buttons for the players to start the game. Both players have buttons to play the game at the same time. The score are displayed everytime a play clicks the play button. If a player gets to the tof of the snake the player is sent down to the tail. If a player get to the the bottom of the ladder the player advances to the top of the ladder.
+The first player that gets to 100 points wins the game.
+There will be an option to play again after each match.
+Players can roll dice, move on the board by clicking on squares.
+Each time they land on a square, there is a chance of getting a snake or ladder.
+A player cannot go back to a square where they already were.
+Designing Steps:
+
+1. Create HTML structure including all necessary elements such as buttons, text areas etc.
+2. Design CSS stylesheet using Flexbox layout methodology.
+3. Implement JavaScript logic to handle user interactions and game rules.
+4. Use local storage to store high scores.
+5. Add a reset button functionality.
+6. Test the application in different browsers.
+7. Make sure the code is clean and well-documented.
+   Design requirements:
+
+- The design should be simple and easy to understand.
+- There should be no unnecessary elements in the UI.
+
+Hw to use the application or play the game:
+How to use this application?
+To start playing, click on "Player1" button. Once started, you can see the current  
+score displayed at the bottom. You can also see your opponent's score as it changes.  
+I used two dots to represent the dices as that was better for me to implement than a dice. player and you can see the dots moving.
+
+Issues faced during development:
+
+- I had difficulty implementing the snakes and ladders feature due to lack of knowledge about how to implement it.
+- I had trouble implementing the snakes and ladders feature due to lack of knowledge about how to implement it in JS.
+- I had trouble implementing the snakes and ladders feature due to lack of knowledge about arrays and loops.
