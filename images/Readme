@@ -22,7 +22,7 @@ html
 CSS
 javaSctipt.
 
-Functionalities:
+Functionalities  of the project:
 Project has 2 players, there are 2 buttons for the players to start the game. Both players have buttons to play the game at the same time. The score are displayed everytime a play clicks the play button. If a player gets to the tof of the snake the player is sent down to the tail. If a player get to the the bottom of the ladder the player advances to the top of the ladder.
 The first player that gets to 100 points wins the game.
 There will be an option to play again after each match.
