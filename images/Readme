@@ -38,10 +38,12 @@ Designing Steps:
 5. Add a reset button functionality.
 6. Test the application in different browsers.
 7. Make sure the code is clean and well-documented.
+   
    Design requirements:
 
 - The design should be simple and easy to understand.
 - There should be no unnecessary elements in the UI.
+The code was modularized for easy handling so if there is an error in one section I will know the exact secion
 
 Hw to use the application or play the game:
 How to use this application?
