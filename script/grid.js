@@ -42,4 +42,3 @@ class Grid {
   }
 }
 
-checkWin2()
