@@ -10,3 +10,5 @@ class Dice {
     this.currentFace = this.faces[randomNumber];
   }
 }
+
+}}
