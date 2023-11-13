@@ -41,3 +41,5 @@ class Grid {
     return -1;
   }
 }
+
+checkWin2()
