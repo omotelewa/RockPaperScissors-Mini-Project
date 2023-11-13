@@ -50,6 +50,6 @@ I used two dots to represent the dices as that was better for me to implement th
 
 Issues faced during development:
 
-- I had difficulty implementing the snakes and ladders feature due to lack of knowledge about how to implement it.
+- I had difficulty implementing the snakes and ladders feature due to lack of knowledge about how to implement some features as it changes whenever a snake or ladder is added.
 - I had trouble implementing the snakes and ladders feature due to lack of knowledge about how to implement it in JS.
 - I had trouble implementing the snakes and ladders feature due to lack of knowledge about arrays and loops.
