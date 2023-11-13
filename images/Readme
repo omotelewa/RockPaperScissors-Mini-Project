@@ -53,7 +53,7 @@ Images used in the game:
 Images from the internet, snakes and ladders. There were difficulties getting png images without background so this made it more tedius to get.
 
 Grids used in the game:
-Used for loop to create the grid for the game.  
+Used for loop to create the grid for the game.  The grid has 10 rows and 10 colunms a total of 100 rows and columns.
 
 
 Issues faced during development:
