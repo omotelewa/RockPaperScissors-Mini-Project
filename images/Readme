@@ -35,16 +35,17 @@ Designing Steps:
 1. Create HTML structure including all necessary elements such as buttons, text areas etc.
 2. Design CSS stylesheet using Flexbox layout methodology.
 3. Implement JavaScript logic to handle user interactions and game rules.
-4. Use local storage to store high scores.
-5. Add a reset button functionality.
-6. Test the application in different browsers.
-7. Make sure the code is clean and well-documented.
-   
-   Design requirements:
+4. Pop up to say when new game should starts
+5. Test the application in different browsers MS edge and google
+6. Make sure the code is clean and well-documented and I had comments so I can go back and improve on the code.
+7. CSS used in styling
+8. Images were in png format.
+9. MS paint 3D was used to remove background from images, Some worked and some didn't.
 
-- The design should be simple and easy to understand.
-- There should be no unnecessary elements in the UI.
-The code was modularized for easy handling so if there is an error in one section I will know the exact secion
+Design requirements:
+
+- Design is very simple and understandable
+- The code was modularized for easy handling so if there is an error in one section I will know the exact secion to update/fix.
 
 Hw to use the application or play the game:
 How to use this application?
@@ -54,14 +55,20 @@ I used two dots to represent the dices as that was better for me to implement th
 
 Images used in the game:
 Images from the internet, snakes and ladders. There were difficulties getting png images without background so this made it more tedius to get.
+Tried to use Ms paind 3D to remove background images, some worked and some didn't
 
 Grids used in the game:
-Used for loop to create the grid for the game.  The grid has 10 rows and 10 colunms a total of 100 rows and columns.
-
+Used for loop to create the grid for the game. The grid has 10 rows and 10 colunms a total of 100 rows and columns.
 
 Issues faced during development:
 
 - I had difficulty implementing the snakes and ladders feature due to lack of knowledge about how to implement some features as it changes whenever a snake or ladder is added.
-- I had trouble implementing the snakes and ladders feature due to lack of knowledge about how to implement it in JS.
-- I had some issues with css. Very tricky to navigate the grids due to the size of the grids.
+- Some issues with css. Very tricky to navigate the grids due to the size of the grids.
 - Coundn't style the grids individually as it messes up the grids and throws the images off the page.
+-
+
+Resources:
+
+1. W3Schools
+2. MDN Web Docs
+3. FreeCode camp
